@@ -202,7 +202,7 @@ jobs:
           RS_PUB_KEY: ${{ secrets.RS_PUB_KEY }}
           API_SERVER: ${{ secrets.API_SERVER }}
         run: |
-          git submodule update --remote --merge
+          git submodule update --remote --force
           sed -i 's|pub const RENDEZVOUS_SERVERS: &\[&str\] = &\[.*\];|pub const RENDEZVOUS_SERVERS: \&[\&str\] = \&["'"$RENDEZVOUS_SERVER"'"];|g' libs/hbb_common/src/config.rs
           sed -i "s|OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=|$RS_PUB_KEY|g" libs/hbb_common/src/config.rs
           sed -i 's|pub const API_SERVER: &str = ".*";|pub const API_SERVER: \&str = "'"$API_SERVER"'";|g' libs/hbb_common/src/config.rs
@@ -630,7 +630,7 @@ jobs:
           RS_PUB_KEY: ${{ secrets.RS_PUB_KEY }}
           API_SERVER: ${{ secrets.API_SERVER }}
         run: |          
-          git submodule update --remote --merge
+          git submodule update --remote --force
           sed -i 's|pub const RENDEZVOUS_SERVERS: &\[&str\] = &\[.*\];|pub const RENDEZVOUS_SERVERS: \&[\&str\] = \&["'"$RENDEZVOUS_SERVER"'"];|g' libs/hbb_common/src/config.rs
           sed -i "s|OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=|$RS_PUB_KEY|g" libs/hbb_common/src/config.rs
           sed -i 's|pub const API_SERVER: &str = ".*";|pub const API_SERVER: \&str = "'"$API_SERVER"'";|g' libs/hbb_common/src/config.rs
@@ -1541,7 +1541,7 @@ jobs:
           RS_PUB_KEY: ${{ secrets.RS_PUB_KEY }}
           API_SERVER: ${{ secrets.API_SERVER }}
         run: |
-          git submodule update --remote --merge
+          git submodule update --remote --force
           sed -i 's|pub const RENDEZVOUS_SERVERS: &\[&str\] = &\[.*\];|pub const RENDEZVOUS_SERVERS: \&[\&str\] = \&["'"$RENDEZVOUS_SERVER"'"];|g' libs/hbb_common/src/config.rs
           sed -i "s|OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=|$RS_PUB_KEY|g" libs/hbb_common/src/config.rs
           sed -i 's|pub const API_SERVER: &str = ".*";|pub const API_SERVER: \&str = "'"$API_SERVER"'";|g' libs/hbb_common/src/config.rs
